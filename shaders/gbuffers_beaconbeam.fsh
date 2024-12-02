@@ -22,5 +22,5 @@ void main() {
 
     vec4 col = texture2D(texture, texcoord.xy) * color * (texture2D(lightmap, lmcoord.st) * 0.8 + 0.2);
 
-    gl_FragData[0] = col;
+    gl_FragData[0] = col * vec4(1.0, 1.0, 1.0, 1.5);
 }

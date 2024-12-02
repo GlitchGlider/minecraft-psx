@@ -33,9 +33,9 @@ void main() {
 	
 	vec4 ftrans = ftransform();
 	float depth = clamp(ftrans.w, 0.001, 1000);
-	float sqrtDepth = sqrt(depth);
+	float sqrtDepth = pow(depth, 0.1/vertex_distance_scalar) + vertex_distance_scalar / 50;
 	
-	vec4 position4 = PixelSnap(ftrans, vertex_inaccuracy_terrain / sqrtDepth);
+	vec4 position4 = PixelSnap(ftrans, pow(vertex_inaccuracy_terrain, 0.25) * 5 * (vertex_distance_scalar * 0.5)  / sqrtDepth);
 	vec3 position = position4.xyz;
 	
 	float wVal = (mat3(gl_ProjectionMatrix) * position).z;

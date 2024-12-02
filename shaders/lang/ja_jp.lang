@@ -1,0 +1,94 @@
+// With the help of Large Language models to translate, ありがとう！
+
+
+
+//      Profile Names
+
+profile.The_Original = §cP§eS§bX §f基本
+profile.Glider = §aグライダー
+profile.Lets_Get_Retro = §7レトロ§fに行こう！
+profile.Just_PostProcessing = §bポスト§fプロセッシング§cだけ
+profile.Horror = §l§4ホラー！
+profile.Geometric_Stylization = §a幾何学的§eスタイライズ
+profile.Dither_Craft = §rデ§8§lィ§rザ§8§lク§rラ§8§lフ§rト
+
+
+
+//      Main Screen Options
+
+
+screen.AFFINE_SCREEN = テクスチャアフィンマッピング...
+screen.AFFINE_SCREEN.comment = テクスチャのワーピングに関するオプションです。
+
+screen.MESH_SCREEN = モデル頂点の不正確さ...
+screen.MESH_SCREEN.comment = ブロック、エンティテイ、手のモデルに関するオプションです。
+
+screen.WORLD_SCREEN = ワールドフォグ...
+screen.WORLD_SCREEN.comment = ワールド内のフォグに関するオプションです。
+
+screen.RENDER_SCREEN = ポストプロセッシング...
+screen.RENDER_SCREEN.comment = ポストプロセッシングに関するオプションです。
+
+
+
+//      AFFINE_SCREEN Options
+
+
+option.affine_mapping = アフィンマッピング
+option.affine_mapping.comment = プロック上のデクスチャの不正確な歪み、あらよる方向に圧縮と引き伸ばしが発生します。
+
+option.affine_clamp_enabled = テクスチャ座標クランプ
+option.affine_clamp_enabled.comment = テクスチャ座標クランプを有効にし、テクスチャが過剰に引き伸ばされないようにします。
+option.affine_clamp = テクスチャ座標クランプ比率
+option.affine_clamp.comment = テクスチャ座標がどれくらいクランプされるかを設定します。§o数値が大きいほど歪みが少なくなります。
+
+
+
+//      MESH_SCREEN Options
+
+
+option.vertex_inaccuracy_terrain = 地形頂点不正確さ
+option.vertex_inaccuracy_terrain.comment = 地形の頂点が急激にずれる（看板のテキストも含む。）
+option.vertex_distance_scalar  =  地形距離不正確さスカラー
+option.vertex_distance_scalar.comment = 地形の不正確さを距離に基づいてスケーリングします。§o数値が大きいほど、遠くの地形ほど不正確になります。
+
+option.vertex_inaccuracy_entities = エンティティ頂点の不正確さ
+option.vertex_inaccuracy_entities.comment = エンティティの頂点が急激にずれます。
+
+option.vertex_inaccuracy_hand = ビューモデル頂点の不正確さ
+option.vertex_inaccuracy_hand.comment = プレイヤーの手のビューモデルの頂点が急激にずれます。
+
+
+
+//      WORLD_SCREEN Options
+
+
+option.fog_enabled = 深度フォグを有効にする
+option.fog_distance = フォグの距離
+
+
+
+//      RENDER_SCREEN Options
+
+
+option.resolution_downscale = 解像度のダウンサンプル
+option.resolution_downscale.comment = すべての描画解像度をダウンサンプルします。
+option.dither_amount = ディザリング量
+option.dither_scale = ディザーパターンスケール
+
+option.color_depth = 色深度
+
+option.retro_zazz = レトロな§dザズ！
+option.retro_zazz.comment = 面白い計算で§5コントラスト§fと§d彩度§fを増加させます。
+
+option.aber_toggle = 色収差
+option.aber_toggle.comment = §c赤§f、§9青§f、§a緑§fの色が視覚的に分裂するようにします。
+value.aber_toggle.0 = オフ
+value.aber_toggle.1 = オン
+
+option.aber_direction = 収差の方向
+value.aber_direction.0 = ⬍  垂直  ⬍
+value.aber_direction.1 = ⬌ 水平 ⬌
+
+option.aber_strength = 収差の強さ
+option.aber_strength.comment = 各色のオフセットの強さ。（負の値は方向を反転させます。）

@@ -1,20 +1,94 @@
-option.affine_mapping=Affine Mapping
-option.affine_clamp=Texcoord Bounds
-option.affine_clamp_enabled=Clamp Texcoord Bounds
+// :3
 
-option.vertex_inaccuracy_terrain=Terrain Vertex Inaccuracy
-option.vertex_inaccuracy_entities=Entity Vertex Inaccuracy
-option.vertex_inaccuracy_hand=Viewmodel Vertex Inaccuracy
 
-option.resolution_scale=Resolution Scale
-option.dither_amount=Dithering Amount
-option.color_depth=Color Depth
-option.fog_distance=Fog Distance
-option.fog_enabled=Enable Depth Fog
 
-screen.AFFINE_SCREEN=Affine Mapping Settings
-screen.AFFINE_SCREEN.comment=Options related to texture warping.
-screen.MESH_SCREEN=Mesh Settings
-screen.MESH_SCREEN.comment=Options related to block, entity, and hand models.
-screen.PP_SCREEN=Post Processing Settings
-screen.PP_SCREEN.comment=Options related to post processing.
+//      Profile Names
+
+profile.The_Original = §cP§eS§bX §fBasic
+profile.Glider = §aGlider
+profile.Lets_Get_Retro = Let's Get §7RETRO!
+profile.Just_PostProcessing = §bJ§fus§ct §bP§fos§ct §bP§frocessin§cg
+profile.Horror = §l§4HORROR!
+profile.Geometric_Stylization = §aGeometric §eStylization
+profile.Dither_Craft = §fD§8i§ft§8h§fe§8r §fC§8r§fa§8f§ft
+
+
+
+//      Main Screen Options
+
+
+screen.AFFINE_SCREEN = Texture Affine Mapping...
+screen.AFFINE_SCREEN.comment = Options related to texture warping.
+
+screen.MESH_SCREEN = Model Vertex Inaccuracy...
+screen.MESH_SCREEN.comment = Options related to block, entity, and hand models.
+
+screen.WORLD_SCREEN = World Fog...
+screen.WORLD_SCREEN.comment = Options related to fog in the world.
+
+screen.RENDER_SCREEN = Post Processing...
+screen.RENDER_SCREEN.comment = Options related to post processing.
+
+
+
+//      AFFINE_SCREEN Options
+
+
+option.affine_mapping = Affine Mapping
+option.affine_mapping.comment = Innacurate distortions of the textures as they exist on the block, squashing and stretching all around.
+
+option.affine_clamp_enabled = Clamp Texcoord
+option.affine_clamp_enabled.comment = Enables Texture Coordinate clamping, making it so that the texture won't over-stretch.
+option.affine_clamp = Clamp Texcoord Ratio
+option.affine_clamp.comment = How much the Texture Coordinate will clamp. §oHigher = Less distortions.
+
+
+
+//      MESH_SCREEN Options
+
+
+option.vertex_inaccuracy_terrain = Terrain Vertex Inaccuracy
+option.vertex_inaccuracy_terrain.comment = Snappy displacement of the vertecies on the terrain (including sign text).
+option.vertex_distance_scalar  =  Terrain Distance Inaccuracy Scalar
+option.vertex_distance_scalar.comment = Scales the Terrain Innacuracy based on distance. §oHigher = Further Terrain will be more Innacurate than Close Terrain.
+
+option.vertex_inaccuracy_entities = Entity Vertex Inaccuracy
+option.vertex_inaccuracy_entities.comment = Snappy displacement of the vertecies on the entities.
+
+option.vertex_inaccuracy_hand = Viewmodel Vertex Inaccuracy
+option.vertex_inaccuracy_hand.comment = Snappy displacement of the vertecies on the player hand.
+
+
+
+//      WORLD_SCREEN Options
+
+
+option.fog_enabled = Enable Depth Fog
+option.fog_distance = Fog Distance
+
+
+
+//      RENDER_SCREEN Options
+
+
+option.resolution_downscale = Resolution Downscale
+option.resolution_downscale.comment = Downscales the rendered resolution of everything.
+option.dither_amount = Dithering Amount
+option.dither_scale = Dither Pattern Scale
+
+option.color_depth = Color Depth
+
+option.retro_zazz = Retro §dZAZZ!
+option.retro_zazz.comment = Increases §5Contrast §f& §dSaturation §fthrough some funny math.
+
+option.aber_toggle = Chromatic Aberration
+option.aber_toggle.comment = Enables the visual position splitting of the §cred§f, §9blue§f, & §agreen §fcolors.
+value.aber_toggle.0 = OFF
+value.aber_toggle.1 = ON
+
+option.aber_direction = Aberration Direction
+value.aber_direction.0 = ⬍  Y  ⬍
+value.aber_direction.1 = ⬌ X ⬌
+
+option.aber_strength = Aberration Strength
+option.aber_strength.comment = The strength of the offset of each color. (Negative values flip the direction.)
