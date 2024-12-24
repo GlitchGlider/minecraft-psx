@@ -1,11 +1,11 @@
-#version 120
+#version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
 
 #define composite
 #include "/shaders.settings"
 
 #define DITHER_COLORS 128
-varying vec2 texcoord;
+in vec2 texcoord;
 
 uniform sampler2D colortex0;
 uniform sampler2D gaux4;

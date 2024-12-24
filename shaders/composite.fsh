@@ -1,32 +1,32 @@
-#version 120
+#version 460 compatibility
 
 // Skybox and rain shader code from Sildurs Vibrant Shaders
 
 #define composite
 #include "/shaders.settings"
 
-varying vec2 texcoord;
+in vec2 texcoord;
 
-varying vec3 lightColor;
-varying vec3 sunVec;
-varying vec3 upVec;
-varying vec3 sky1;
-varying vec3 sky2;
+in vec3 lightColor;
+in vec3 sunVec;
+in vec3 upVec;
+in vec3 sky1;
+in vec3 sky2;
 
-varying float tr;
+in float tr;
 
-varying vec2 lightPos;
+in vec2 lightPos;
 
-varying vec3 sunlight;
-varying vec3 nsunlight;
+in vec3 sunlight;
+in vec3 nsunlight;
 
-varying vec3 rawAvg;
+in vec3 rawAvg;
 
-varying float SdotU;
-varying float sunVisibility;
-varying float moonVisibility;
+in float SdotU;
+in float sunVisibility;
+in float moonVisibility;
 
-varying vec3 avgAmbient2;
+in vec3 avgAmbient2;
 
 uniform vec3 skyColor;
 uniform mat4 gbufferProjectionInverse;

@@ -1,7 +1,7 @@
-#version 120
+#version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
 
-varying vec2 texcoord;
+out vec2 texcoord;
 
 void main() {
 

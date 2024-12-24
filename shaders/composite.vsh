@@ -1,27 +1,27 @@
-#version 120
+#version 460 compatibility
 
-varying vec2 texcoord;
+out vec2 texcoord;
 
-varying vec3 lightColor;
-varying vec3 sunVec;
-varying vec3 upVec;
-varying vec3 sky1;
-varying vec3 sky2;
+out vec3 lightColor;
+out vec3 sunVec;
+out vec3 upVec;
+out vec3 sky1;
+out vec3 sky2;
 
-varying float tr;
+out float tr;
 
-varying vec2 lightPos;
+out vec2 lightPos;
 
-varying vec3 sunlight;
-varying vec3 nsunlight;
+out vec3 sunlight;
+out vec3 nsunlight;
 
-varying vec3 rawAvg;
+out vec3 rawAvg;
 
-varying float SdotU;
-varying float sunVisibility;
-varying float moonVisibility;
+out float SdotU;
+out float sunVisibility;
+out float moonVisibility;
 
-varying vec3 avgAmbient2;
+out vec3 avgAmbient2;
 
 uniform vec3 sunPosition;
 uniform vec3 upPosition;

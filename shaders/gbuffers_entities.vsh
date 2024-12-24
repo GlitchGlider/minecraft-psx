@@ -1,4 +1,4 @@
-#version 120
+#version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
 #include "/lib/psx_util.glsl"
 
@@ -6,10 +6,10 @@
 #define gbuffers_entities
 #include "/shaders.settings"
 
-varying vec4 texcoord;
-varying vec4 texcoordAffine;
-varying vec4 lmcoord;
-varying vec4 color;
+out vec4 texcoord;
+out vec4 texcoordAffine;
+out vec4 lmcoord;
+out vec4 color;
 
 uniform vec2 texelSize;
 
@@ -25,7 +25,7 @@ void main() {
 	lmcoord = gl_TextureMatrix[1] * gl_MultiTexCoord1;
 	
 	vec4 ftrans = ftransform();
-	float depth = clamp(ftrans.w, 0.001, 1000);
+	float depth = clamp(ftrans.w, 0.001, 1000.0);
 	float sqrtDepth = sqrt(depth);
 	
 	vec4 position4 = mat4(gl_ModelViewMatrix) * vec4(gl_Vertex) + gl_ModelViewMatrix[3].xyzw;

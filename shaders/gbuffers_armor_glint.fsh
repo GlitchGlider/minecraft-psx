@@ -1,4 +1,4 @@
-#version 120
+#version 460 compatibility
 /* DRAWBUFFERS:01 */
 #extension GL_EXT_gpu_shader4 : enable
 #extension GL_ARB_shader_texture_lod : enable
@@ -8,9 +8,9 @@
 
 uniform sampler2D texture;
 
-varying vec4 color;
-varying vec4 texcoord;
-varying vec4 texcoordAffine;
+in vec4 color;
+in vec4 texcoord;
+in vec4 texcoordAffine;
 
 uniform int worldTime;
 uniform ivec2 eyeBrightnessSmooth;

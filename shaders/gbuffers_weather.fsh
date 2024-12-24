@@ -1,10 +1,10 @@
-#version 120
+#version 460 compatibility
 /* DRAWBUFFERS:7 */
 
-varying vec4 color;
+in vec4 color;
 
-varying vec2 texcoord;
-varying float lmcoord;
+in vec2 texcoord;
+in float lmcoord;
 
 uniform sampler2D texture;
 

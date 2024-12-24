@@ -1,4 +1,4 @@
-#version 120
+#version 460 compatibility
 /* DRAWBUFFERS:01 */
 #extension GL_EXT_gpu_shader4 : enable
 #extension GL_ARB_shader_texture_lod : enable
@@ -6,11 +6,11 @@
 #define gbuffers_solid
 #include "/shaders.settings"
 
-varying vec4 texcoord;
-varying vec4 lmcoord;
-varying vec4 color;
-varying vec4 blockColor;
-varying vec4 normalMat;
+in vec4 texcoord;
+in vec4 lmcoord;
+in vec4 color;
+in vec4 blockColor;
+in vec4 normalMat;
 
 #include "/lib/psx_util.glsl"
 

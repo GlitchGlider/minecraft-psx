@@ -1,13 +1,13 @@
-#version 120
+#version 460 compatibility
 #include "/lib/psx_util.glsl"
 
 #define gbuffers_solid
 #define gbuffers_entities
 #include "/shaders.settings"
 
-varying vec4 color;
-varying vec4 texcoord;
-varying vec4 texcoordAffine;
+out vec4 color;
+out vec4 texcoord;
+out vec4 texcoordAffine;
 
 #define diagonal3(m) vec3((m)[0].x, (m)[1].y, m[2].z)
 #define  projMAD(m, v) (diagonal3(m) * (v) + (m)[3].xyz)

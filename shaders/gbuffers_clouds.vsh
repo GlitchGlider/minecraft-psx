@@ -1,8 +1,8 @@
-#version 120
+#version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
 
-varying vec4 texcoord;
-varying vec4 color;
+out vec4 texcoord;
+out vec4 color;
 
 uniform vec2 texelSize;
 

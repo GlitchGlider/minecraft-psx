@@ -1,4 +1,4 @@
-#version 120
+#version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
 #include "/lib/psx_util.glsl"
 
@@ -6,15 +6,15 @@
 #define gbuffers_terrain
 #include "/shaders.settings"
 
-varying vec4 texcoord;
-varying vec4 texcoordAffine;
-varying vec4 lmcoord;
-varying vec4 color;
-varying vec4 normal;
-varying vec3 tangent;
-varying vec3 binormal;
+out vec4 texcoord;
+out vec4 texcoordAffine;
+out vec4 lmcoord;
+out vec4 color;
+out vec4 normal;
+out vec3 tangent;
+out vec3 binormal;
 
-attribute vec4 mc_Entity;
+in vec4 mc_Entity;
 uniform vec2 texelSize;
 uniform mat4 gbufferModelViewInverse;
 uniform mat4 gbufferModelView;
@@ -32,7 +32,7 @@ void main() {
 	lmcoord = gl_TextureMatrix[1] * gl_MultiTexCoord1;
 	
 	vec4 ftrans = ftransform();
-	float depth = clamp(ftrans.w, 0.001, 1000);
+	float depth = clamp(ftrans.w, 0.001, 1000.0);
 	float sqrtDepth = pow(depth, 0.1/vertex_distance_scalar) + vertex_distance_scalar / 50;
 	
 	vec4 position4 = PixelSnap(ftrans, pow(vertex_inaccuracy_terrain, 0.25) * 5 * (vertex_distance_scalar * 0.5)  / sqrtDepth);

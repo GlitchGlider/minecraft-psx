@@ -1,4 +1,4 @@
-#version 120
+#version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
 #include "/lib/psx_util.glsl"
 
@@ -6,13 +6,13 @@
 #define gbuffers_hand
 #include "/shaders.settings"
 
-varying vec4 texcoord;
-varying vec4 lmcoord;
-varying vec4 color;
-varying vec4 normalMat;
-varying vec4 lightLevels;
+out vec4 texcoord;
+out vec4 lmcoord;
+out vec4 color;
+out vec4 normalMat;
+out vec4 lightLevels;
 
-attribute vec4 mc_Entity;
+in vec4 mc_Entity;
 uniform vec2 texelSize;
 
 #define diagonal3(m) vec3((m)[0].x, (m)[1].y, m[2].z)

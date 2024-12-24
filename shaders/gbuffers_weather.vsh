@@ -1,8 +1,8 @@
-#version 120
+#version 460 compatibility
 
-varying vec4 color;
-varying vec2 texcoord;
-varying float lmcoord;
+out vec4 color;
+out vec2 texcoord;
+out float lmcoord;
 
 uniform vec3 cameraPosition;
 uniform mat4 gbufferModelViewInverse;
