@@ -9,9 +9,6 @@ in vec2 texcoord;
 layout(location = 0) out vec4 color;
 
 void main() {
-    #ifdef fog_enabled
-	float fogDepth = depth * fog_distance - (fog_distance-1);
-	fogDepth = clamp(fogDepth, 0.0, 1.0);
-	#endif
 	color = texture(colortex0, texcoord);
+
 }

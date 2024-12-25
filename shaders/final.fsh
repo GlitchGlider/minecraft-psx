@@ -10,7 +10,6 @@ in vec2 texcoord;
 
 uniform sampler2D colortex0;
 uniform sampler2D depthtex0;
-uniform sampler2D depthtex1;
 uniform sampler2D gaux4;
 uniform vec2 texelSize;
 uniform float viewWidth;
@@ -51,11 +50,12 @@ void main() {
                         );
     #endif
 
-    float depth = texture(depthtex0, downscale).r;
+    float depth0 = texture(depthtex0, downscale).r;
+
     
     #ifdef fog_enabled
-        float fogdepth = clamp(pow(depth, pow(fog_distance, 1.1)), 0.0, 1.0);
-        if (depth < 1.0) {
+        float fogdepth = clamp(pow(depth0, pow(fog_distance, 1.1)), 0.0, 1.0);
+        if (depth0 < 1.0) {
             col.rgb = col.rgb*(-fogdepth+1) + (fogdepth*skyColor);
         }
     #endif

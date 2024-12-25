@@ -1,0 +1,94 @@
+// With the help of Large Language models to translate, 谢谢！
+
+
+
+//      Profile Names
+
+profile.The_Original = §cP§eS§bX §f基础
+profile.Glider = §aGlider
+profile.Lets_Get_Retro = §7走向§f复古！
+profile.Just_PostProcessing = §b后§f处理§c仅
+profile.Horror = §l§4恐怖！
+profile.Geometric_Stylization = §a几何§e风格化
+profile.Dither_Craft = §r抖§8§l动§r工§8§l艺§r craft
+
+
+
+//      Main Screen Options
+
+
+screen.AFFINE_SCREEN = 纹理仿射映射...
+screen.AFFINE_SCREEN.comment = 與紋理扭曲相關的選項。
+
+screen.MESH_SCREEN = 模型顶点不准确...
+screen.MESH_SCREEN.comment = 與區塊、實體和手部模型相關的選項。
+
+screen.WORLD_SCREEN = 世界雾霾...
+screen.WORLD_SCREEN.comment = 與世界中的霧相關的選項。
+
+screen.RENDER_SCREEN = 后处理...
+screen.RENDER_SCREEN.comment = 與後期處理相關的選項。
+
+
+
+//      AFFINE_SCREEN Options
+
+
+option.affine_mapping = 仿射映射
+option.affine_mapping.comment = 纹理在方块上的不准确扭曲，四处压缩和拉伸。
+
+option.affine_clamp_enabled = 纹理坐标钳制
+option.affine_clamp_enabled.comment = 启用纹理坐标钳制，防止纹理过度拉伸。
+option.affine_clamp = 纹理坐标钳制比率
+option.affine_clamp.comment = 控制纹理坐标钳制的强度。§o数值越高，扭曲越少。
+
+
+
+//      MESH_SCREEN Options
+
+
+option.vertex_inaccuracy_terrain = 地形顶点不准确
+option.vertex_inaccuracy_terrain.comment = 地形顶点的快速位移（包括招牌文本）。
+option.vertex_distance_scalar = 地形距离不准确比例
+option.vertex_distance_scalar.comment = 根据距离缩放地形不准确性。§o数值越大，远处的地形比近处的地形更不准确。
+
+option.vertex_inaccuracy_entities = 实体顶点不准确
+option.vertex_inaccuracy_entities.comment = 实体顶点的快速位移。
+
+option.vertex_inaccuracy_hand = 视角模型顶点不准确
+option.vertex_inaccuracy_hand.comment = 玩家手持物体的视角模型顶点的快速位移。
+
+
+
+//      WORLD_SCREEN Options
+
+
+option.fog_enabled = 启用深度雾霾
+option.fog_distance = 雾霾距离
+
+
+
+//      RENDER_SCREEN Options
+
+
+option.resolution_downscale = 分辨率缩小
+option.resolution_downscale.comment = 降低所有渲染的分辨率。
+option.dither_amount = 抖动量
+option.dither_scale = 抖动图案缩放
+
+option.color_depth = 色彩深度
+
+option.retro_zazz = 复古§d炫彩！
+option.retro_zazz.comment = 通过有趣的数学运算增加§5对比度§f和§d饱和度。
+
+option.aber_toggle = 色差
+option.aber_toggle.comment = 启用§c红§f、§9蓝§f、§a绿§f三色的视觉位移。
+value.aber_toggle.0 = 关闭
+value.aber_toggle.1 = 打开
+
+option.aber_direction = 色差方向
+value.aber_direction.0 = ⬍  垂直  ⬍
+value.aber_direction.1 = ⬌ 水平 ⬌
+
+option.aber_strength = 色差强度
+option.aber_strength.comment = 每种颜色的偏移强度。（负值会翻转方向。）

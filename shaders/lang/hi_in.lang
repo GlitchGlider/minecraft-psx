@@ -1,0 +1,93 @@
+// With the help of Large Language models to translate, धन्यवाद!
+
+
+
+//      Profile Names
+
+profile.The_Original = §cP§eS§bX §fबेसिक
+profile.Glider = §aGlider
+profile.Lets_Get_Retro = चलो §7रेट्रो §rहो जाते हैं!
+profile.Just_PostProcessing = §bसि§cर्फ §bपो§cस्ट §bप्रो§fसेसिं§cग
+profile.Horror = §l§4हॉरर!
+profile.Geometric_Stylization = §aज्यामितीय §eशैलीकरण
+profile.Dither_Craft = §fडि§7थ§fर §7C§fr§7a§ff§7t 
+
+
+//      Main Screen Options
+
+
+screen.AFFINE_SCREEN = टेक्सचर अफाइन मैपिंग...
+screen.AFFINE_SCREEN.comment = टेक्सचर के विकृतियों से संबंधित विकल्प।
+
+screen.MESH_SCREEN = मॉडल वर्टेक्स इनएक्युरेसी...
+screen.MESH_SCREEN.comment = ब्लॉक, एंटिटी, और हाथ मॉडलों से संबंधित विकल्प।
+
+screen.WORLD_SCREEN = वर्ल्ड फॉग...
+screen.WORLD_SCREEN.comment = वर्ल्ड में धुंध से संबंधित विकल्प।
+
+screen.RENDER_SCREEN = पोस्ट प्रोसेसिंग...
+screen.RENDER_SCREEN.comment = पोस्ट प्रोसेसिंग से संबंधित विकल्प।
+
+
+
+//      AFFINE_SCREEN Options
+
+
+option.affine_mapping = अफाइन मैपिंग
+option.affine_mapping.comment = ब्लॉक पर जैसे टेक्सचर होते हैं वैसे ही उनकी विकृतियाँ, सभी तरफ खिंचाव और संकुचन।
+
+option.affine_clamp_enabled = क्लैंप टेक्सकोर्ड
+option.affine_clamp_enabled.comment = टेक्सचर कोऑर्डिनेट क्लैंपिंग सक्षम करता है, जिससे टेक्सचर अधिक खिंचता नहीं है।
+option.affine_clamp = क्लैंप टेक्सकोर्ड अनुपात
+option.affine_clamp.comment = टेक्सचर कोऑर्डिनेट कितना क्लैंप होगा। §oज्यादा = कम विकृतियाँ।
+
+
+
+//      MESH_SCREEN Options
+
+
+option.vertex_inaccuracy_terrain = इलाके में वर्टेक्स इनएक्युरेसी
+option.vertex_inaccuracy_terrain.comment = इलाके (साइन टेक्स्ट सहित) पर वर्टेक्स की त्वरित विस्थापन।
+option.vertex_distance_scalar = इलाके की दूरी में इनएक्युरेसी स्केलर
+option.vertex_distance_scalar.comment = दूरी के आधार पर इलाके की इनएक्युरेसी को स्केल करता है। §oज्यादा = दूर का इलाका पास वाले से अधिक इनएक्युरेट होगा।
+
+option.vertex_inaccuracy_entities = एंटिटी वर्टेक्स इनएक्युरेसी
+option.vertex_inaccuracy_entities.comment = एंटिटी पर वर्टेक्स की त्वरित विस्थापन।
+
+option.vertex_inaccuracy_hand = व्यूमॉडल वर्टेक्स इनएक्युरेसी
+option.vertex_inaccuracy_hand.comment = प्लेयर के हाथ पर वर्टेक्स की त्वरित विस्थापन।
+
+
+
+//      WORLD_SCREEN Options
+
+
+option.fog_enabled = डेप्थ फॉग सक्षम करें
+option.fog_distance = फॉग की दूरी
+
+
+
+//      RENDER_SCREEN Options
+
+
+option.resolution_downscale = रिज़ॉल्यूशन डाउनस्केल
+option.resolution_downscale.comment = सब कुछ के रेंडर किए गए रिज़ॉल्यूशन को डाउनस्केल करता है।
+option.dither_amount = डिथरिंग की मात्रा
+option.dither_scale = डिथर पैटर्न का स्केल
+
+option.color_depth = रंग की गहराई
+
+option.retro_zazz = रेट्रो §dपिज़ाज़!
+option.retro_zazz.comment = कुछ मजेदार गणना के माध्यम से §5कॉन्ट्रास्ट §f& §dसैचुरेशन को बढ़ाता है।
+
+option.aber_toggle = क्रोमैटिक एबरेशन
+option.aber_toggle.comment = §cलाल§f, §9नीला§f, & §aहरा §fरंगों के दृश्य स्थिति विभाजन को सक्षम करता है।
+value.aber_toggle.0 = बंद
+value.aber_toggle.1 = चालू
+
+option.aber_direction = एबरेशन दिशा
+value.aber_direction.0 = ⬍  लंबवत  ⬍
+value.aber_direction.1 = ⬌ क्षैतिज ⬌
+
+option.aber_strength = एबरेशन ताकत
+option.aber_strength.comment = प्रत्येक रंग के ऑफ़सेट की ताकत। (नकारात्मक मान दिशा को पलटते हैं।)

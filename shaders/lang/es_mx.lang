@@ -1,0 +1,94 @@
+// With the help of Large Language models to translate, ¡gracias!
+
+
+
+//      Nombres de Perfil
+
+profile.The_Original = §cP§eS§bX §fBásico
+profile.Glider = §aPlaneador
+profile.Lets_Get_Retro = ¡Vamos a Ponernos §7RETRO!
+profile.Just_PostProcessing = §bS§fol§co §bP§fos§ct §bP§frocesamient§co
+profile.Horror = §l§4¡HORROR!
+profile.Geometric_Stylization = §aEstilización §eGeométrica
+profile.Dither_Craft = §fD§8i§ft§8h§fe§8r §fC§8r§fa§8f§ft
+
+
+
+//      Opciones de Pantalla Principal
+
+
+screen.AFFINE_SCREEN = Mapeo Afín de Textura...
+screen.AFFINE_SCREEN.comment = Opciones relacionadas con la deformación de texturas.
+
+screen.MESH_SCREEN = Inexactitud de Vértices de Modelo...
+screen.MESH_SCREEN.comment = Opciones relacionadas con bloques, entidades y modelos de mano.
+
+screen.WORLD_SCREEN = Niebla en el Mundo...
+screen.WORLD_SCREEN.comment = Opciones relacionadas con la niebla en el mundo.
+
+screen.RENDER_SCREEN = Post Procesado...
+screen.RENDER_SCREEN.comment = Opciones relacionadas con el post procesamiento.
+
+
+
+//      Opciones de AFFINE_SCREEN
+
+
+option.affine_mapping = Mapeo Afín
+option.affine_mapping.comment = Distorsiones inexactas de las texturas como existen en el bloque, aplastando y estirando por todas partes.
+
+option.affine_clamp_enabled = Limitar Coordenadas de Textura
+option.affine_clamp_enabled.comment = Activa el limitador de coordenadas de textura, evitando que la textura se estire demasiado.
+option.affine_clamp = Ratio de Limite de Coordenadas de Textura
+option.affine_clamp.comment = Cuánto se limitarán las coordenadas de textura. §oMayor = Menos distorsiones.
+
+
+
+//      Opciones de MESH_SCREEN
+
+
+option.vertex_inaccuracy_terrain = Inexactitud de Vértices del Terreno
+option.vertex_inaccuracy_terrain.comment = Desplazamiento brusco de los vértices en el terreno (incluyendo el texto de los letreros).
+option.vertex_distance_scalar = Escala de Inexactitud de Distancia del Terreno
+option.vertex_distance_scalar.comment = Escala la inexactitud del terreno según la distancia. §oMayor = El terreno más alejado será más inexacto que el terreno cercano.
+
+option.vertex_inaccuracy_entities = Inexactitud de Vértices de Entidades
+option.vertex_inaccuracy_entities.comment = Desplazamiento brusco de los vértices en las entidades.
+
+option.vertex_inaccuracy_hand = Inexactitud de Vértices del Modelo de Mano
+option.vertex_inaccuracy_hand.comment = Desplazamiento brusco de los vértices en la mano del jugador.
+
+
+
+//      Opciones de WORLD_SCREEN
+
+
+option.fog_enabled = Habilitar Niebla de Profundidad
+option.fog_distance = Distancia de la Niebla
+
+
+
+//      Opciones de RENDER_SCREEN
+
+
+option.resolution_downscale = Reducción de Resolución
+option.resolution_downscale.comment = Reduce la resolución renderizada de todo.
+option.dither_amount = Cantidad de Dither
+option.dither_scale = Escala de Patrón de Dither
+
+option.color_depth = Profundidad de Color
+
+option.retro_zazz = ¡Retro §dZAZZ!
+option.retro_zazz.comment = Aumenta el §5Contraste §f& §dSaturación §fmediante algunos cálculos divertidos.
+
+option.aber_toggle = Aberración Cromática
+option.aber_toggle.comment = Activa la separación visual de las posiciones de los colores §cred§f, §9azul§f y §agreen §f.
+value.aber_toggle.0 = APAGADO
+value.aber_toggle.1 = ENCENDIDO
+
+option.aber_direction = Dirección de la Aberración
+value.aber_direction.0 = ⬍  Y  ⬍
+value.aber_direction.1 = ⬌ X ⬌
+
+option.aber_strength = Intensidad de la Aberración
+option.aber_strength.comment = La intensidad del desplazamiento de cada color. (Los valores negativos invierten la dirección.)
