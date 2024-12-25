@@ -20,7 +20,7 @@ void main() {
     vec2 texelSize = vec2(1.0 / viewWidth, 1.0 / viewHeight);
     vec2 affine = AffineMapping(texcoordAffine, texcoord, texelSize, 2);
 
-    vec4 col = texture2D(texture, texcoord.xy) * color * (texture2D(lightmap, lmcoord.st) * 0.8 + 0.2);
+    vec4 col = texture2D(texture, texcoord.xy) * color * (texture2D(lightmap, lmcoord.st));
 
     gl_FragData[0] = col;
 }

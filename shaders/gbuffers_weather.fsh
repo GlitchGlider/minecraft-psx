@@ -1,16 +1,24 @@
 #version 460 compatibility
-/* DRAWBUFFERS:7 */
 
-in vec4 color;
+#include "/lib/common.glsl"
 
+uniform sampler2D lightmap;
+uniform sampler2D gtexture;
+
+uniform float alphaTestRef = 0.1;
+
+in vec2 lmcoord;
 in vec2 texcoord;
-in float lmcoord;
+in vec4 glcolor;
 
-uniform sampler2D texture;
+/* RENDERTARGETS: 0 */
+layout(location = 0) out vec4 color;
 
 void main() {
-
-	vec4 tex = texture2D(texture, texcoord.xy)*color;
-
-	gl_FragData[0] = vec4(vec3(1.0,lmcoord,1.0),tex.a*length(tex.rgb)/1.732);
+	color = texture(gtexture, texcoord) * glcolor;
+	color *= texture(lightmap, lmcoord);
+    color.rgb = colSaturation(color.rgb, 1.0);
+	if (color.a < alphaTestRef) {
+		discard;
+	}
 }

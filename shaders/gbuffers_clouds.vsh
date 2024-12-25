@@ -1,15 +1,10 @@
 #version 460 compatibility
-#extension GL_EXT_gpu_shader4 : enable
 
-out vec4 texcoord;
-out vec4 color;
-
-uniform vec2 texelSize;
+out vec2 texcoord;
+out vec4 glcolor;
 
 void main() {
-	texcoord = gl_MultiTexCoord0;
-
-	color = gl_Color;
-	
 	gl_Position = ftransform();
+	texcoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;
+	glcolor = gl_Color;
 }

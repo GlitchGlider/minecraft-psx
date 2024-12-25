@@ -3,16 +3,20 @@
 
 #define composite
 #include "/shaders.settings"
+#include "/lib/common.glsl"
 
 #define DITHER_COLORS 128
 in vec2 texcoord;
 
 uniform sampler2D colortex0;
+uniform sampler2D depthtex0;
+uniform sampler2D depthtex1;
 uniform sampler2D gaux4;
 uniform vec2 texelSize;
 uniform float viewWidth;
 uniform float viewHeight;
 uniform float aspectRatio;
+uniform vec3 skyColor;
 
 vec3 GetDither(vec2 pos, vec3 c, float intensity) {
     int DITHER_THRESHOLDS[16] = int[](-4, 0, -3, 1, 2, -2, 3, -1, -3, 1, -4, 0, 3, -1, 2, -2);
@@ -25,6 +29,8 @@ vec3 GetDither(vec2 pos, vec3 c, float intensity) {
 }
 
 void main() {
+
+
     vec2 baseRes = vec2(viewWidth, viewHeight);
     vec2 dsRes = baseRes * resolution_downscale;
     //float pixelSize = dsRes.x / baseRes.x;
@@ -45,10 +51,19 @@ void main() {
                         );
     #endif
 
+    float depth = texture(depthtex0, downscale).r;
+    
+    #ifdef fog_enabled
+        float fogdepth = clamp(pow(depth, pow(fog_distance, 1.1)), 0.0, 1.0);
+        if (depth < 1.0) {
+            col.rgb = col.rgb*(-fogdepth+1) + (fogdepth*skyColor);
+        }
+    #endif
 
-    col = clamp((retro_zazz + 1) * (col - 0.5) + 0.5 + (retro_zazz * 0.17), 0, 1);
+    col = clamp(colSaturation(col, (retro_zazz * 0.8) + 1.0), 0, 1);
     col = GetDither(vec2(downscale.x, downscale.y / aspectRatio) * dsRes.x * dither_scale, col, (dither_amount * 0.0007));
     col = clamp(floor(col * color_depth) / color_depth, 0.0, 1.0);
+    col = clamp(colContrast(col, retro_zazz * 1.8), 0.0, 1.0);
 
     gl_FragColor.rgb = col;
 }

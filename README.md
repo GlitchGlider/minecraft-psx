@@ -4,10 +4,9 @@ A Minecraft shader pack for originally for both [OptiFine](https://optifine.net/
 
 ## This fork however focuses on running with Iris!
 
-Tested to work with Minecraft 1.21.3, and under research.
+Tested to work with Minecraft 1.20.6-1.21.3, and under research.
 
 The main goal of this fork is to fix some of the buffers rendering incorrectly and to port Distant Horizons support to this specific shader pack.
-There's a lot to do for this, and I have only just begun learning GLSL, so it'll take a while to learn, fix, and improve.
 
 > [!WARNING]
 > Distant Horizons is currently not supported!
@@ -34,8 +33,6 @@ Place the cloned repository folder or downloaded zip file in your `shaderpacks` 
 **※ NOTE:** If you don't know where your `shaderpacks` folder is located, you can open it using the "Shaders Folder" button (OptiFine) or the "Open Shader Pack Folder…" button (Iris) on the bottom left of your shader pack selection screen.
 
 ### Older Known Issues
-
-- Beacon beams tilt and do weird things when terrain vertex snapping is on due to [OptiFine issue #4905](https://github.com/sp614x/optifine/issues/4905) (sp614x/optifine#4905). If anyone knows the block entity ID of beacon beams or whatever it is to single it out in gbuffers_block, please let me know.
 
 - Texture affine mapping behaviour on Iris does not exactly match that of OptiFine's. All affine mapped textures on Iris warp in the opposite direction compared to OptiFine, though this is not noticeable without comparing the two side-by-side.
 

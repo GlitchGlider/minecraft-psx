@@ -1,6 +1,8 @@
 #version 460 compatibility
-#extension GL_EXT_gpu_shader4 : enable
+
+out vec4 glcolor;
 
 void main() {
 	gl_Position = ftransform();
+	glcolor = gl_Color;
 }

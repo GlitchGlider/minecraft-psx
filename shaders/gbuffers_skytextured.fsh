@@ -1,11 +1,18 @@
 #version 460 compatibility
-/* DRAWBUFFERS:5 */
 
-in vec4 color;
+uniform sampler2D gtexture;
+
+uniform float alphaTestRef = 0.1;
+
 in vec2 texcoord;
+in vec4 glcolor;
 
-uniform sampler2D texture;
+/* RENDERTARGETS: 0 */
+layout(location = 0) out vec4 color;
 
 void main() {
-	gl_FragData[0] = texture2D(texture,texcoord.xy) * color;
+	color = texture(gtexture, texcoord) * glcolor;
+	if (color.a < alphaTestRef) {
+		discard;
+	}
 }

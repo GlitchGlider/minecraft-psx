@@ -8,6 +8,7 @@
 
 uniform float viewWidth;
 uniform float viewHeight;
+uniform vec3 skyColor;
 
 in vec4 texcoord;
 in vec4 texcoordAffine;
@@ -18,6 +19,7 @@ in vec4 color;
 
 uniform sampler2D texture;
 uniform sampler2D lightmap;
+uniform sampler2D depthtex0;
 
 void main() {
 	#ifdef affine_mapping
@@ -31,8 +33,10 @@ void main() {
 	vec2 affine = texcoord.xy;
 	#endif
 
-	vec4 lighting = color * (texture2D(lightmap, lmcoord.st) * 0.8 + 0.2);
+	vec4 lighting = color * (texture2D(lightmap, lmcoord.st));
 	vec4 col = texture2D(texture, affine) * lighting;
+
+    
 	
 	gl_FragData[0] = col;
 	gl_FragData[1] = vec4(vec3(gl_FragCoord.z), 1.0);
