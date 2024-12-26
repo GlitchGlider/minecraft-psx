@@ -23,8 +23,8 @@ screen.AFFINE_SCREEN.comment = Options related to texture warping.
 screen.MESH_SCREEN = Model Vertex Inaccuracy...
 screen.MESH_SCREEN.comment = Options related to block, entity, and hand models.
 
-screen.WORLD_SCREEN = World Fog...
-screen.WORLD_SCREEN.comment = Options related to fog in the world.
+screen.WORLD_SCREEN = World Options...
+screen.WORLD_SCREEN.comment = Options related to fog and sky.
 
 screen.RENDER_SCREEN = Post Processing...
 screen.RENDER_SCREEN.comment = Options related to post processing.
@@ -64,7 +64,14 @@ option.vertex_inaccuracy_hand.comment = Snappy displacement of the vertecies on 
 
 
 option.fog_enabled = Enable Depth Fog
+value.fog_enabled.0 = OFF
+value.fog_enabled.1 = ON
 option.fog_distance = Fog Distance
+
+option.end_noise_speed = End Void Noise Speed
+option.end_noise_speed.comment = The end void's noise speed.
+option.end_noise_strength = End Void Noise Strength
+option.end_noise_strength.comment = The end void's noise strength.
 
 
 

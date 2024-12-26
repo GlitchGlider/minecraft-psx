@@ -23,8 +23,8 @@ screen.AFFINE_SCREEN.comment = Opciones relacionadas con la deformación de text
 screen.MESH_SCREEN = Inexactitud de Vértices de Modelo...
 screen.MESH_SCREEN.comment = Opciones relacionadas con bloques, entidades y modelos de mano.
 
-screen.WORLD_SCREEN = Niebla en el Mundo...
-screen.WORLD_SCREEN.comment = Opciones relacionadas con la niebla en el mundo.
+screen.WORLD_SCREEN = Opciones del Mundo...
+screen.WORLD_SCREEN.comment = Opciones relacionadas con la niebla y el cielo.
 
 screen.RENDER_SCREEN = Post Procesado...
 screen.RENDER_SCREEN.comment = Opciones relacionadas con el post procesamiento.
@@ -64,7 +64,14 @@ option.vertex_inaccuracy_hand.comment = Desplazamiento brusco de los vértices e
 
 
 option.fog_enabled = Habilitar Niebla de Profundidad
+value.fog_enabled.0 = APAGADO
+value.fog_enabled.1 = ENCENDIDO
 option.fog_distance = Distancia de la Niebla
+
+option.end_noise_speed = Velocidad del Ruido del Vacío Final
+option.end_noise_speed.comment = Ajusta la velocidad del ruido del vacío final.
+option.end_noise_strength = Fuerza del Ruido del Vacío Final
+option.end_noise_strength.comment = Modifica la fuerza del ruido del vacío final.
 
 
 

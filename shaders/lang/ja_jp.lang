@@ -23,8 +23,8 @@ screen.AFFINE_SCREEN.comment = テクスチャのワーピングに関するオ�
 screen.MESH_SCREEN = モデル頂点の不正確さ...
 screen.MESH_SCREEN.comment = ブロック、エンティテイ、手のモデルに関するオプションです。
 
-screen.WORLD_SCREEN = ワールドフォグ...
-screen.WORLD_SCREEN.comment = ワールド内のフォグに関するオプションです。
+screen.WORLD_SCREEN = ワールドオプション...
+screen.WORLD_SCREEN.comment = 霧と空に関連するオプションです。
 
 screen.RENDER_SCREEN = ポストプロセッシング...
 screen.RENDER_SCREEN.comment = ポストプロセッシングに関するオプションです。
@@ -64,7 +64,14 @@ option.vertex_inaccuracy_hand.comment = プレイヤーの手のビューモデ�
 
 
 option.fog_enabled = 深度フォグを有効にする
+value.fog_enabled.0 = オフ
+value.fog_enabled.1 = オン
 option.fog_distance = フォグの距離
+
+option.end_noise_speed = エンドヴォイドのノイズ速度
+option.end_noise_speed.comment = エンドヴォイドのノイズ速度を調整します。
+option.end_noise_strength = エンドヴォイドのノイズ強度
+option.end_noise_strength.comment = エンドヴォイドのノイズ強度を変更します。
 
 
 

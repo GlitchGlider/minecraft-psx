@@ -8,8 +8,8 @@ Tested to work with Minecraft 1.20.6-1.21.3, and under research.
 
 The main goal of this fork is to fix some of the buffers rendering incorrectly and to port Distant Horizons support to this specific shader pack.
 
-> [!WARNING]
-> Distant Horizons is currently not supported!
+> [!IMPORTANT]
+> Distant Horizons is currently supported, but not very polished!
 
 ## Video Demonstrations
 

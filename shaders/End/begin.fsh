@@ -1,0 +1,22 @@
+#version 460 compatibility
+
+in vec2 texcoord;
+uniform float frameTimeCounter;
+uniform float frameTime;
+
+in vec4 glcolor;
+#include "/lib/common.glsl"
+#include "/shaders.settings"
+
+/* RENDERTARGETS: 0 */
+layout(location = 0) out vec4 color;
+
+void main() {
+    int small_frames = int(frameTimeCounter * 10 * end_noise_speed);
+    color = vec4(0.145, 0.055, 0.231, 1.0);
+    color.rgb *= vec3(
+        noise2(texcoord + small_frames),
+        noise2(texcoord + small_frames),
+        noise2(texcoord + small_frames)
+        ) * end_noise_strength + (end_noise_strength * -0.5 + 0.5);
+}

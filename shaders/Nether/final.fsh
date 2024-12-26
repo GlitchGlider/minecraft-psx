@@ -15,7 +15,7 @@ uniform vec2 texelSize;
 uniform float viewWidth;
 uniform float viewHeight;
 uniform float aspectRatio;
-uniform vec3 skyColor;
+uniform vec3 fogColor;
 
 vec3 GetDither(vec2 pos, vec3 c, float intensity) {
     int DITHER_THRESHOLDS[16] = int[](-4, 0, -3, 1, 2, -2, 3, -1, -3, 1, -4, 0, 3, -1, 2, -2);
@@ -56,7 +56,7 @@ void main() {
     #if fog_enabled == 1
         float fogdepth = clamp(pow(depth0, pow(fog_distance, 1.1)), 0.0, 1.0);
         if (depth0 < 1.0) {
-            col.rgb = col.rgb*(-fogdepth+1) + (fogdepth*skyColor);
+            col.rgb = col.rgb*(-fogdepth+1) + (fogdepth*fogColor);
         }
     #endif
 

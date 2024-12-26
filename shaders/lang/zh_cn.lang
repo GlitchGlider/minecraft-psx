@@ -23,8 +23,8 @@ screen.AFFINE_SCREEN.comment = 與紋理扭曲相關的選項。
 screen.MESH_SCREEN = 模型顶点不准确...
 screen.MESH_SCREEN.comment = 與區塊、實體和手部模型相關的選項。
 
-screen.WORLD_SCREEN = 世界雾霾...
-screen.WORLD_SCREEN.comment = 與世界中的霧相關的選項。
+screen.WORLD_SCREEN = 世界选项...
+screen.WORLD_SCREEN.comment = 与雾霾和天空相关的选项。
 
 screen.RENDER_SCREEN = 后处理...
 screen.RENDER_SCREEN.comment = 與後期處理相關的選項。
@@ -64,7 +64,14 @@ option.vertex_inaccuracy_hand.comment = 玩家手持物体的视角模型顶点�
 
 
 option.fog_enabled = 启用深度雾霾
+value.fog_enabled.0 = 关闭
+value.fog_enabled.1 = 打开
 option.fog_distance = 雾霾距离
+
+option.end_noise_speed = 终极虚空噪音速度
+option.end_noise_speed.comment = 调整终极虚空的噪音速度。
+option.end_noise_strength = 终极虚空噪音强度
+option.end_noise_strength.comment = 修改终极虚空的噪音强度。
 
 
 
