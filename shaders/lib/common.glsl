@@ -19,7 +19,7 @@ vec3 colContrast(vec3 inputcolor, float ratio) {
 }
 
 float rand(float n) {
-    return fract(sin(n) * 43758.5453123);
+    return fract(sin(n) * 437548.5453123);
 }
 
 float noise(float p) {
@@ -29,6 +29,6 @@ float noise(float p) {
 }
 
 float noise2(vec2 a) {
-    float c = noise(pow(a.x, noise(a.y * 1000.0)) * 100000.0);
+    float c = noise(pow(a.x, noise(a.y * 10021.0432)) * 100000.12599);
     return c;
 }
