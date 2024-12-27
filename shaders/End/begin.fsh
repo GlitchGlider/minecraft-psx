@@ -3,6 +3,7 @@
 in vec2 texcoord;
 uniform float frameTimeCounter;
 uniform float frameTime;
+uniform vec3 fogColor;
 
 in vec4 glcolor;
 #include "/lib/common.glsl"
@@ -12,7 +13,7 @@ in vec4 glcolor;
 layout(location = 0) out vec4 color;
 
 void main() {
-    float small_frames = int(frameTimeCounter * 10 * end_noise_speed)*0.2;
+    float small_frames = int(mod(frameTimeCounter, 20) * 10 * end_noise_speed)*0.2;
     color = vec4(0.145, 0.055, 0.231, 1.0);
     color.rgb *= vec3(
         noise2(texcoord + small_frames),

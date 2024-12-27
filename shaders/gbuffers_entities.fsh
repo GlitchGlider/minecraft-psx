@@ -3,8 +3,9 @@
 #extension GL_EXT_gpu_shader4 : enable
 #extension GL_ARB_shader_texture_lod : enable
 
-#define gbuffers_solid
 #include "/shaders.settings"
+#include "/lib/common.glsl"
+#include "/lib/psx_util.glsl"
 
 in vec4 texcoord;
 in vec4 texcoordAffine;
@@ -18,8 +19,6 @@ uniform sampler2D texture;
 uniform sampler2D lightmap;
 uniform vec4 entityColor;
 uniform vec3 skyColor;
-
-#include "/lib/psx_util.glsl"
 
 
 void main() {

@@ -1,10 +1,9 @@
 #version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
-#include "/lib/psx_util.glsl"
 
-#define gbuffers_solid
-#define gbuffers_terrain
 #include "/shaders.settings"
+#include "/lib/common.glsl"
+#include "/lib/psx_util.glsl"
 
 out vec4 texcoord;
 out vec4 texcoordAffine;

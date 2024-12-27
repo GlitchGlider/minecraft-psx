@@ -1,8 +1,6 @@
 #version 460 compatibility
-#include "/lib/psx_util.glsl"
 
-#define gbuffers_solid
-#define gbuffers_entities
+#include "/lib/psx_util.glsl"
 #include "/shaders.settings"
 
 out vec4 color;

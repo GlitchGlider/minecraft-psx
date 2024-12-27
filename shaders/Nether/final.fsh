@@ -1,7 +1,6 @@
 #version 460 compatibility
 #extension GL_EXT_gpu_shader4 : enable
 
-#define composite
 #include "/shaders.settings"
 #include "/lib/common.glsl"
 
@@ -50,14 +49,23 @@ void main() {
                         );
     #endif
 
+    
     float depth0 = texture(depthtex0, downscale).r;
 
     
     #if fog_enabled == 1
-        float fogdepth = clamp(pow(depth0, pow(fog_distance, 1.1)), 0.0, 1.0);
-        if (depth0 < 1.0) {
-            col.rgb = col.rgb*(-fogdepth+1) + (fogdepth*fogColor);
-        }
+        #ifndef DISTANT_HORIZONS
+            float fogdepth = clamp(pow(depth0, fog_distance), 0.0, 1.0);
+            if (depth0 < 1.0) {
+                col.rgb = col.rgb*(-fogdepth+1) + (fogdepth*fogColor);
+            }
+        #endif
+        #ifdef DISTANT_HORIZONS
+            float fogdepth = clamp(pow(-pow(fog_distance/5000.0, 0.0000001)*500000 + 500000, 2), 0.0, 1.0);
+            if (depth0 < 1.0) {
+                col.rgb*(fogdepth) + ((-fogdepth+1)*fogColor);
+            }
+        #endif
     #endif
 
     col = clamp(colSaturation(col, (retro_zazz * 0.8) + 1.0), 0, 1);

@@ -3,8 +3,9 @@
 #extension GL_EXT_gpu_shader4 : enable
 #extension GL_ARB_shader_texture_lod : enable
 
-#define gbuffers_solid
 #include "/shaders.settings"
+#include "/lib/common.glsl"
+#include "/lib/psx_util.glsl"
 
 uniform sampler2D texture;
 
@@ -20,8 +21,6 @@ uniform float frameTimeCounter;
 
 float night = clamp((worldTime-13000.0)/300.0,0.0,1.0)-clamp((worldTime-22800.0)/200.0,0.0,1.0);
 float cavelight = pow(eyeBrightnessSmooth.y / 255.0, 6.0f) * 1.0 + (0.7 + 0.5*night);
-
-#include "/lib/psx_util.glsl"
 
 void main() {
 	#ifdef affine_mapping
